@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <!-- Bootstrap setup -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="discussion.js"></script>
+    <link rel="stylesheet" type="text/css" href="form.css"></style>
+    
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand d-none d-md-block" routerLink="">
+    KB Planner
+  </a>
+
+
+  <!-- Only visible when navbar collapses
+    Collapses links
+    Adds a user icon for account
+  -->
+  <a class="navbar-brand ml-auto mr-auto d-md-none" routerLink="">
+    KB Planner
+  </a>
+
+  <a href="profile.html">
+    <img class="d-md-none" src="assets/svg/user-1633249.svg" height="30px" width="30px" />
+  </a>
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href = "group_homepage.html">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href = "DisscusionBoard.html">Discussion Board</a>
+      </li>
+
+    </ul>
+  </div>
+  <a href="login_screen.html" style = "padding-right: 5px;">
+    Log Out
+  </a>
+  <a class="account d-none d-md-block" href="profile.html">
+  
+      <img src="assets/svg/user-1633249.svg" width = "30" height = "30" alt="Profile">
+      
+  </a>
+
+</nav>
+
+</header>
+
+<!-- End of Nav Bar -->
+
+
+<!-- Start of Discussion Board -->
+
+<div id="discussion-board" class="mx-auto w-75 p3" style="padding-bottom:50px;">
+    <!-- Discussion Nav Start -->
+    <ul class="nav nav-tabs mx-auto" id="d-navbar">
+      <li class="nav-item">
+      <input type='text' id='section' placeholder='Add New Section'> <button type='button' class='btn' onclick='addDiscussionSection(); clearSectionInput();'> + </button> 
+    </li>
+    </ul>
+    <!--Discussion Nav End-->
+
+    <div class="tab-content" id="d-content">
+
+    </div>
+    <!-- Gets added by JS-->
+
+</div>
+<button class="open-button" onclick="openForm();"> ADD NEW POST </button>
+
+
+<!-- Add New Post -->
+<div class="form-popup" id="myForm">
+        <div class="form-container">
+          <h1></h1>
+      
+          <label for="section"><b>Enter Discussion Section</b></label>
+          <input type="text" placeholder="Section Name" id="section-post" required>
+
+          <label for="title"><b>Enter a Title</b></label>
+          <input type="text" placeholder="Post Title" id="title-post" required>
+      
+          <label for="psw"><b>Enter Post Description</b></label>
+          <input type="text" placeholder="Post Description" id="post-detail" required>
+      
+          <button type="submit"  class="btn" onclick="newPost();">Submit Post</button>
+          <button type="button" class="btn cancel" onclick=" closeForm(); clearFormInput();">Close</button>
+      </div>
+</div>
+<!-- End Add New Post-->
+
+<!-- End of Discussion Board -->
+
+<footer class = "footer">
+
+                    
+    
+  <nav class="navbar fixed-bottom ">
+          <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox" />
+                  <div class="slider round"></div>
+            </label>
+        
+          </div>
+ 
+  </nav>
+</footer>
+
+
+<script>
+
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark'); //add this
+      }
+      else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light'); //add this
+      }    
+  }
+  
+  
+  if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+  
+      if (currentTheme === 'dark') {
+          toggleSwitch.checked = true;
+      }
+  }
+  
+  
+  
+  toggleSwitch.addEventListener('change', switchTheme, false);
+  </script>
+
+
+<!-- End of footer -->
+
+
+
+</body>
+</html>
