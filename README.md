@@ -28,3 +28,14 @@ Discussion Board
 ![DBw](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/newpostdark.png)
 ![DB3](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/points.png)
 
+Comments
+
+![C](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/postcomment.png)
+![C2](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/commentposted.png)
+
+Admin
+
+![admin1](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/adminhome1.png)
+![admin2](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/adminhome2.png)
+![admin3](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/addstudent.png)
+![admin4](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/addaccount.png)
