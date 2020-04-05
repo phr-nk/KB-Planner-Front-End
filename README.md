@@ -25,6 +25,7 @@ Discussion Board
 
 ![DB1](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/discussionboardlight.png)
 ![DB](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/newpost.png)
+![DBB](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/posted.png)
 ![DBw](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/newpostdark.png)
 ![DB3](https://github.com/phr-nk/KB-Planner-Front-End/blob/master/assets/projectpics/points.png)
 
